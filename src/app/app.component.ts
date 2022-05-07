@@ -113,6 +113,14 @@ export class AppComponent implements OnInit {
       alert('delete card : ' + JSON.stringify(response));
       if (response.cardDeleted) {
         this.getAllCards();
+        this.card = {
+          id: '',
+          cardHolderName: '',
+          cardNumber: '',
+          expiryMonth: '',
+          expiryYear: '',
+          cvc: '',
+        };
       }
     });
   }
